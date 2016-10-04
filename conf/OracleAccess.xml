@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+		
+ 
+<bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource">
+	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+	<property name="url" value="jdbc:oracle:thin:@adadb489.firsthealth.com:1521:PRSNDEV3" />
+	<property name="username" value="viareqal" />
+	<property name="password" value="romAnoS1:16" />
+</bean>
+
+<bean name="TeamDAO" class="org.avr.daos.impl.TeamDAO2impl">
+	<property name="dataSrc" ref="datasource" />
+</bean>
+
+</beans>

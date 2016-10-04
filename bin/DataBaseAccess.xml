@@ -10,7 +10,7 @@
 	<!--
 	<property name="password" value="${pwd}" />  
 	-->
-	<property name="password" value="TercerCielo" />
+	<property name="password" value="NotAPassword" />
 	
 	<property name="initialSize" value="5" />
 	<property name="maxActive" value="10" />

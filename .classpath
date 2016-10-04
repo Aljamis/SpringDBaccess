@@ -4,13 +4,15 @@
 	<classpathentry kind="src" path="conf"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
-	<classpathentry kind="lib" path="lib/org.springframework.asm-3.1.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/org.springframework.beans-3.1.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/org.springframework.context-3.1.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/org.springframework.core-3.1.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/org.springframework.expression-3.1.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.22-bin.jar"/>
 	<classpathentry kind="lib" path="lib/commons-dbcp-1.4.jar"/>
 	<classpathentry kind="lib" path="lib/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="P:/apps/spring-framework-4.3.3.RELEASE/libs/spring-beans-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="P:/apps/spring-framework-4.3.3.RELEASE/libs/spring-context-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="P:/apps/spring-framework-4.3.3.RELEASE/libs/spring-core-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="P:/apps/spring-framework-4.3.3.RELEASE/libs/spring-expression-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="P:/apps/spring-framework-4.3.3.RELEASE/libs/spring-jdbc-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="P:/WORKSPACES_win7/CEIservices/CEIDXService/lib/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="P:/apps/spring-dao-2.0.8.jar"/>
+	<classpathentry kind="lib" path="P:/apps/ApacheDerby/db-derby-10.12.1.1-bin/lib/derby.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

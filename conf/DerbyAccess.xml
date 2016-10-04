@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+		
+ 
+<bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource">
+	<property name="url" value="jdbc:derby:P:/WORKSPACES_win7/OEPE/ApacheDerby/DerbyDb/MyDbTest" />
+</bean>
+
+<bean name="TeamDAO" class="org.avr.daos.impl.TeamDAOderbyImpl">
+	<property name="dataSrc" ref="datasource" />
+</bean>
+
+</beans>

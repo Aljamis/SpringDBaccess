@@ -12,6 +12,14 @@ import javax.sql.DataSource;
 import org.avr.beans.Team;
 import org.avr.daos.TeamDAO;
 
+
+
+/**
+ * Simple DataSource.  All connections and results must be closed.
+ * ==> I am required for all the boilerplate code
+ * @author axviareque
+ *
+ */
 public class TeamDAOimpl implements TeamDAO {
 	private DataSource dataSrc;
 		
