@@ -4,10 +4,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.avr.beans.Team;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
@@ -33,7 +38,7 @@ public class DerbyDataAcces {
 		
 		Team t = jTemp.queryForObject(
 				"select prsn_id , name_first from person where prsn_id = ? "
-				, new Object[] { 9L }
+				, new Object[] { 0L }
 				, new RowMapper<Team>() {
 					public Team mapRow(ResultSet rs , int rowNum) throws SQLException {
 						Team tm = new Team();
@@ -43,6 +48,37 @@ public class DerbyDataAcces {
 					}
 				} );
 		System.out.println( t.getTeamName() );
+		
+		
+		
+		
+		
+		/*  Get Column Names  */
+		List<String> colNames = jTemp.query("select * from person2"
+				, new ResultSetExtractor<List<String>>() {
+					@Override
+					public List<String> extractData(ResultSet rs) throws SQLException, DataAccessException {
+						List<String> columnNames = new ArrayList<String>();
+						for (int i = 1; i <= rs.getMetaData().getColumnCount() ; i++) {
+							columnNames.add( rs.getMetaData().getColumnName( i ) );
+						}
+						return columnNames;
+					}
+				});
+		
+		for (String colName : colNames) {
+			System.out.println( colName );
+		}
+		
+//		try {
+//			System.out.println( rsmd.getColumnCount() );
+//			for (int i = 1; i <= rsmd.getColumnCount() ; i++) {
+//				System.out.println( rsmd.getColumnName( i ) );
+//			}
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 		/*
 		 * Connect to a Derby DB on a different network drive.

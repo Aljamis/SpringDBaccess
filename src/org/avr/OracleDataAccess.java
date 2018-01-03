@@ -19,7 +19,7 @@ public class OracleDataAccess {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext( ctxFileName );
 		
 		TeamDAO dao = (TeamDAO)ctx.getBean("TeamDAO");
-		Team t = dao.getTeamByID(6);
+		Team t = dao.getTeamByID(6708442);
 		System.out.println( t.getTeamName() );
 		
 		((ClassPathXmlApplicationContext)ctx).close();

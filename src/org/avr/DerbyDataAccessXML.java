@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
 /**
- * Access Derby without an ApplicationContext XML
+ * Access Derby WITH an ApplicationContext XML
  * @author axviareque
  *
  */

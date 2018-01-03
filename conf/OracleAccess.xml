@@ -4,14 +4,15 @@
 		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 		
 <bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource">
-	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-	<property name="url" value="jdbc:mysql://192.168.1.20:3306/CFL" />
-	<property name="username" value="alfonso" />
+	<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+	<property name="url" value="jdbc:oracle:thin:@//adadb489.firsthealth.com:1521/PRSNDEV3" />
+	<property name="username" value="VIAREQAL" />
 	<!--
 	<property name="password" value="${pwd}" />  
+	<property name="password" value="4gvn&#038;Rdemed" />
 	-->
-	<property name="password" value="NotAPassword" />
-	
+	<property name="password" value="h315R&#0033;zen" />
+		
 	<property name="initialSize" value="5" />
 	<property name="maxActive" value="10" />
 </bean>

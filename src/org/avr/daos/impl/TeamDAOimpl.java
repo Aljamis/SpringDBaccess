@@ -37,7 +37,7 @@ public class TeamDAOimpl implements TeamDAO {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String qry = "select name from Teams_R where id= ? ";
+		String qry = "select LAST_NM from person where prsn_id = ?";
 		
 		try {
 			conn = this.dataSrc.getConnection();
